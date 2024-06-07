@@ -26,10 +26,13 @@ class BacktrackingGenerator(MazeGenAlgo):
         if mask is None:
             print("No mask present")
         
-        # create empty grid, with walls
-        grid = np.empty((self.H, self.W), dtype=np.int8)
-        grid.fill(1)
-        print("grid")
+            # create empty grid, with walls
+            grid = np.empty((self.H, self.W), dtype=np.int8)
+            grid.fill(1)
+        else:
+            grid = mask
+
+        
         crow = randrange(1, self.H, 2)
         ccol = randrange(1, self.W, 2)
         track = [(crow, ccol)]
