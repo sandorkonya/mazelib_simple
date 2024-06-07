@@ -16,12 +16,16 @@ class BacktrackingGenerator(MazeGenAlgo):
     def __init__(self, w, h):
         super(BacktrackingGenerator, self).__init__(w, h)
 
-    def generate(self):
+    def generate(self, mask):
         """highest-level method that implements the maze-generating algorithm
-
+        Input:
+            mask if any
         Returns:
             np.array: returned matrix
         """
+        if mask is None:
+            print("No mask present")
+        
         # create empty grid, with walls
         grid = np.empty((self.H, self.W), dtype=np.int8)
         grid.fill(1)
