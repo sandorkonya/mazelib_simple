@@ -14,6 +14,7 @@ class Maze:
         self.end = None
         self.transmuters = []
         self.solver = None
+        self.mask = None
         self.solutions = None
         self.prune = True
         Maze.set_seed(seed)
@@ -42,8 +43,7 @@ class Maze:
         assert not (
             self.generator is None
         ), "No maze-generation algorithm has been set."
-
-        self.grid = self.generator.generate()
+        self.grid = self.generator.generate(self.mask)
         self.start = None
         self.end = None
         self.solutions = None
