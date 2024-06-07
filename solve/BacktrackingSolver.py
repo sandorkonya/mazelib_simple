@@ -1,7 +1,7 @@
 from random import choice
 
 # If the code is not Cython-compiled, we need to add some imports.
-from mazelib.solve.MazeSolveAlgo import MazeSolveAlgo
+from solve.MazeSolveAlgo import MazeSolveAlgo
 
 class BacktrackingSolver(MazeSolveAlgo):
     """
