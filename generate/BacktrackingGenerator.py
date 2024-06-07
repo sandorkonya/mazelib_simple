@@ -1,7 +1,7 @@
 import numpy as np
 from random import randrange
 
-from mazelib.generate.MazeGenAlgo import MazeGenAlgo
+from generate.MazeGenAlgo import MazeGenAlgo
 
 
 class BacktrackingGenerator(MazeGenAlgo):
